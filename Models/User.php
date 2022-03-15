@@ -2,10 +2,10 @@
 class User{
 
     private $id;
-    private $user_id;
+    private $user_name;
     private $email;
     private $password;
-    private $image
+    private $image;
 
     public function __construct($id, $user_id, $email, $password,$image){
         $this->id=$id;
@@ -37,7 +37,7 @@ class User{
     }
     
 
-    public function setUser_ID{
+    public function setUser_ID(){
         $this->user_id = $user_id;
     }
 
