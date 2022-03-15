@@ -1,10 +1,10 @@
 <?php
 class Answer{
     private $id;
-   private $author_id;
-   private $author_user_id;
-   private $question_id;   
-   private $content;
+    private $author_id;
+    private $author_user_id;
+    private $question_id;   
+    private $content;
 
     public function __construct($id, $author_id, $author_user_id, $question_id, $content)
     {
