@@ -9,20 +9,16 @@ class DbManager {
 
 
     public function __construct(){
-
-        $this->bdd = $this->connexionBdd() ;
+        try{
+            $this->bdd = new PDO("mysql:dbname=".$this->dbName.";host=".$this->dbHost, $this->dbUser, $this->dbPass);
+            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(Exception $ex) {
+        die('Error '. $ex->getMessage());
+        } ;
+      
+        }
+       
         
     }
 
-    public function connexionBdd(){
- 
-       try{
-            $this->bdd = new PDO("mysql:dbname=".$this->dbName.";host=".$this->dbHost, $this->dbUser, $this->dbPass);
-            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(Exception $ex) {
-        die('Error '. $ex->getMessage());
-    }
-    }
-
-}
-
+    
