@@ -36,23 +36,23 @@ class Question{
     return $this->publication;
    }
 
-   public function setSubject(){
+   public function setSubject($subject){
     $this->subject=$subject;
    }
    
-   public function setContent(){
+   public function setContent($content){
     $this->content=$content;
    }
 
-   public function setAuthor_id(){
+   public function setAuthor_id($author_id){
     $this->author_id=$author_id;
    }
 
-   public function setAuthor_user_idt(){
+   public function setAuthor_user_idt($author_user_id){
     $this->author_user_id=$author_user_id;
    }
 
-   public function setPublication(){
+   public function setPublication($publication){
     $this->publication=$publication;
    }
 }
