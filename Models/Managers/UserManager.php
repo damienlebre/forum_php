@@ -4,7 +4,7 @@
             $retour = null;
             $query = $this->bdd->prepare("SELECT * FROM users WHERE user_id = :user_id");
             $query->execute([
-                "user_id"=> $user_name
+                "user_id"=> $user_id
             ]);
 
             $result = $query->fetch();
@@ -19,7 +19,7 @@
         public function add($user){
             $query = $this->bdd->prepare("INSERT INTO user ( user_id, email, password, image) VALUES (:user_id, :email, :password, :image)");
             $query->execute([
-                "user_id"=> $user_id->getUsername(),
+                "user_id"=> $user->getUser_ID(),
                 "password"=> $user->getPassword(),
                 "email"=> $user->getEmail(),
                 "image"=> $user->getImage()
