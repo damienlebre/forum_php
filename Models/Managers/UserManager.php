@@ -1,5 +1,5 @@
 <?php
-    class UserManager extends DBManager{
+    class UserManager extends DbManager{
         public function getByUsername($user_id){
             $retour = null;
             $query = $this->bdd->prepare("SELECT * FROM users WHERE user_id = :user_id");

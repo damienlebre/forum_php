@@ -16,13 +16,12 @@ class DbManager {
 
     public function connexionBdd(){
  
-        $mysqli = new mysqli($this->dbHost, $this->dbUser , $this->dbPass, $this->dbName);
-        if ($mysqli->connect_errno) {
-            echo "Échec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-        }
-        echo $mysqli->host_info . "\n";
-
-        return $mysqli;
+       try{
+            $this->bdd = new PDO("mysql:dbname=".$this->dbName.";host=".$this->dbHost, $this->dbUser, $this->dbPass);
+            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch(Exception $ex) {
+        die('Error '. $ex->getMessage());
+    }
     }
 
 }
