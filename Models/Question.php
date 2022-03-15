@@ -1,0 +1,58 @@
+<?php
+class Question{
+   private $id;
+   private $subject;
+   private $content;
+   private $author_id;
+   private $author_user_id;
+   private $publication;
+
+
+   public function __construct($id, $subject, $content, $author_id, $author_user_id, $publication){
+    
+    
+   }
+   public function getID(){
+    return $this->id;
+   }
+
+   public function getSubject(){
+    return $this->Subject;
+   }
+
+   public function getContent(){
+    return $this->content;
+   }
+
+   public function getAuthor_id(){
+    return $this->author_id;
+   }
+
+   public function getAuthor_user_id(){
+    return $this->author_user_id;
+   }
+
+   public function getPublication(){
+    return $this->publication;
+   }
+
+   public function setSubject(){
+    $this->subject=$subject;
+   }
+   
+   public function setContent(){
+    $this->content=$content;
+   }
+
+   public function setAuthor_id(){
+    $this->author_id=$author_id;
+   }
+
+   public function setAuthor_user_idt(){
+    $this->author_user_id=$author_user_id;
+   }
+
+   public function setPublication(){
+    $this->publication=$publication;
+   }
+}
