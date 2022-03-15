@@ -9,7 +9,7 @@ class User{
 
     public function __construct($id, $user_id, $email, $password,$image){
         $this->id=$id;
-        $this->user_name=$user_id;
+        $this->user_id=$user_id;
         $this->email=$email;
         $this->password=$password;
         $this->image=$image;
@@ -34,10 +34,10 @@ class User{
 
     public function getImage(){
         return $this->image;
-    }
-    
+    }  
 
     public function setUser_ID($user_id){
+
         $this->user_id = $user_id;
     }
 
