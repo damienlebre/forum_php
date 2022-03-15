@@ -7,9 +7,9 @@ class User{
     private $password;
     private $image
 
-    public function __construct($id, $user_name, $email, $password,$image){
+    public function __construct($id, $user_id, $email, $password,$image){
         $this->id=$id;
-        $this->user_name=$user_name;
+        $this->user_name=$user_id;
         $this->email=$email;
         $this->password=$password;
         $this->image=$image;
@@ -20,8 +20,8 @@ class User{
         return $this->id;
     }
 
-    public function getUser_Name(){
-        return $this->user_name;
+    public function getUser_ID(){
+        return $this->user_id;
     }
 
     public function getEmail(){
@@ -37,8 +37,8 @@ class User{
     }
     
 
-    public function setUser_Name{
-        $this->username = $user_name;
+    public function setUser_ID{
+        $this->user_id = $user_id;
     }
 
     public function setEmail{
