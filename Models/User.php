@@ -41,15 +41,15 @@ class User{
         $this->user_id = $user_id;
     }
 
-    public function setEmail{
+    public function setEmail(){
         $this->email = $email;
     }
 
-    public function setPassword
+    public function setPassword(){
         $this->password = $password;
     }
 
-    public function setImage{
+    public function setImage(){
         $this->image = $image;
     }
 }   
