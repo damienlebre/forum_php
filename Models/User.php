@@ -2,7 +2,7 @@
 class User{
 
     private $id;
-    private $user_id;
+    private $user_name;
     private $email;
     private $password;
     private $image;
@@ -34,22 +34,22 @@ class User{
 
     public function getImage(){
         return $this->image;
-    }
-    
+    }  
 
-    public function setUser_ID(){
+    public function setUser_ID($user_id){
+
         $this->user_id = $user_id;
     }
 
-    public function setEmail(){
+    public function setEmail($email){
         $this->email = $email;
     }
 
-    public function setPassword(){
+    public function setPassword($password){
         $this->password = $password;
     }
 
-    public function setImage(){
+    public function setImage($image){
         $this->image = $image;
     }
 }   
