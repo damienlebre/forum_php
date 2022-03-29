@@ -10,11 +10,11 @@ class Question{
 
    public function __construct($id, $subject, $content, $author_id, $author_user_id, $publication){
       $this->id = $id;
-      $this->id = $subject;
-      $this->id = $content;
-      $this->id = $author_id;
-      $this->id = $author_user_id;
-      $this->id = $publication;
+      $this->subject = $subject;
+      $this->content = $content;
+      $this->author_id = $author_id;
+      $this->author_user_id = $author_user_id;
+      $this->publication = $publication;
 
    }
    public function getID(){

@@ -3,7 +3,7 @@
 
 // ============ Models ============
 require 'loader.php';
-
+require 'views/menu.php';
 
 //view
 
@@ -11,9 +11,10 @@ require 'loader.php';
 
 // les routeurs
 // page par defaut
-if(empty($_GET)){
-    header('Location: index.php?controller=security&action=register');
-}
+// if(empty($_GET)){
+    
+//     header('Location: index.php?controller=security&action=register');
+// }
 
 
 //Login s'enregistrer
@@ -28,26 +29,26 @@ if($_GET['controller'] == "security"){
 }
 
 //Poster une question
-if($_GET['controller'] == "question"){
+// if($_GET['controller'] == "question"){
 
-    $questionController = new QuestionController;
+//     $questionController = new QuestionController;
  
-     if($_GET['action'] == "addQuestion"){
-         $questionController->add();
-     }
+//      if($_GET['action'] == "addQuestion"){
+//          $questionController->add("test");
+//      }
 
-    }
+//     }
 
 //Répondre à une question
 if($_GET['controller'] == "answer"){
 
-    $answerController = new AnswerController;
+    // $answerController = new AnswerController;
  
-     if($_GET['action'] == "addanswer"){
-         $questionController->add();
-     }
+    //  if($_GET['action'] == "addanswer"){
+    //      $questionController->add("test");
+    //  }
 
-    }
+     }
 
 
 ?>

@@ -10,11 +10,11 @@
         <h1>Ajouter une question</h1>
 
         <form action="" method="post">
-            <label for="question">Question :</label>
-            <input type="text" id="question" name="question">
+            <label for="question">Sujet :</label>
+            <input type="text" id="question" name="question" required>
 
-            <label for="content">Contenu de votre question</label>
-            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            <label for="content">Votre question :</label>
+            <textarea name="content" id="content" cols="30" rows="10" required></textarea>
 
             <button type="submit">Soumettre</button>
 

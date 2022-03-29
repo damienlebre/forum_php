@@ -7,23 +7,23 @@
         <ul class="navbar-nav">
 
             <?php
-                if(isset($this->user)){
-                    echo('   <li class="nav-item">
-                <a class="nav-link" href="index.php?controller=security&action=logout">Me déconnecter</a>
-            </li>
+               
+            //         echo('   <li class="nav-item">
+            //     <a class="nav-link" href="index.php?controller=security&action=logout">Me déconnecter</a>
+            // </li>
             
-             <li class="nav-item">
-                <a class="nav-link" href="index.php?controller=topic&action=list">Les questions !</a>
-            </li
+            //  <li class="nav-item">
+            //     <a class="nav-link" href="index.php?controller=question&action=list">Les questions !</a>
+            // </li
 
-            <li class="float-end">Bonjour '.$this->user->getUsername().'</li>');
-                } else {
+            //  <li class="float-end">Bonjour '.$this->user->getUsername().'</li>');
+                
                     echo('   <li class="nav-item">
                 <a class="nav-link" href="index.php?controller=security&action=register">M\'enregistrer</a>
             </li> <li class="nav-item">
                 <a class="nav-link" href="index.php?controller=security&action=login">Me connecter</a>
             </li>');
-                }
+                
             ?>
 
         </ul>
