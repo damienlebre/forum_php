@@ -19,12 +19,16 @@
     <button>s'enregistrer</button>
 
     <?php
- echo $_SESSION['user']->getUser_ID();
+       
         
         if(isset($_SESSION['user'])){
             echo "nom du user : ";
            echo $_SESSION['user']->getUser_ID();
-        }
+            
+     ?>       
+           <a href="index.php?controller=security&action=logout">Logout</a>
+
+     <?php   }
     ?>
 
 </body>
