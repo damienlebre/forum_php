@@ -9,6 +9,15 @@ class SecurityController{
 
     }
 
+    public function login(){
+
+        //rechercher le user
+        $user = $this->userManager->getByUsername($_POST['username']);
+        // var de session
+        $_SESSION["user"] = serialize($user) ;
+        header("Location: index.php");
+    }
+
     public function register(){
         $errors =[];
 
@@ -26,7 +35,7 @@ class SecurityController{
             // si pas d'erreurs ajouter le username dans la bdd
             if(count($errors) == 0){
 
-                // TODO image
+                //TODO image
                 $image = "12";
 
                 // hash du pawwsword
