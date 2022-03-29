@@ -10,6 +10,7 @@ class Question{
 
    public function __construct($id, $subject, $content, $author_id, $author_user_id, $publication){
     
+      $this->id = $id;
     
    }
    public function getID(){
@@ -17,7 +18,7 @@ class Question{
    }
 
    public function getSubject(){
-    return $this->Subject;
+    return $this->subject;
    }
 
    public function getContent(){

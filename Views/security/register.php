@@ -13,7 +13,7 @@
         <input id="username" name="username" type="text">
 
         <label for="mail">mail : </label>
-        <input id="mail" name="mail" type="mail">
+        <input id="mail" name="mail" type="text">
 
         <label for="password">PW : </label>
         <input id="password" name="password" type="password">

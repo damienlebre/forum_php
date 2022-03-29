@@ -44,6 +44,8 @@ if($_GET['controller'] == "security"){
     }
 
     if($_GET['action'] == "login"){
+        // TODO enlever le require
+       require 'Views/security/login.php';
         $securityController->login();
     }
 

@@ -16,6 +16,8 @@
             return $retour;
         }
 
+        
+
         public function add($user){
             $query = $this->bdd->prepare("INSERT INTO users (user_id, email, password, image) VALUES (:user_id, :email, :password, :image)");
             $query->execute([

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,8 +15,17 @@
     
     <h1>Bienvenue sur SuperForum</h1>
 
-    <h2>se connecter</h2>
-    <h2>s'enregistrer</h2>
+    <a href="index.php?controller=security&action=login">se connecter</a>
+    <button>s'enregistrer</button>
+
+    <?php
+ echo $_SESSION['user']->getUser_ID();
+        
+        if(isset($_SESSION['user'])){
+            echo "nom du user : ";
+           echo $_SESSION['user']->getUser_ID();
+        }
+    ?>
 
 </body>
 </html>

@@ -10,12 +10,42 @@ class SecurityController{
     }
 
     public function login(){
+        $errors = [];
 
-        //rechercher le user
-        $user = $this->userManager->getByUsername($_POST['username']);
-        // var de session
-        $_SESSION["user"] = serialize($user) ;
-        header("Location: index.php");
+        if($_SERVER['REQUEST_METHOD'] == 'POST' ){
+
+            //si le user n'est pas rempli
+            if(empty($_POST['username'])){
+                $errors[] = "Veuillez saisir un nom d'utilisateur.";
+            }
+
+            //si le password est  vide
+            if(empty($_POST['password'])){
+                $errors[] = "Veuillez saisir un password";
+            }
+
+            // recuperer le user dans la bdd
+            $user = $this->userManager->getByUsername($_POST['username']);
+            if(is_null($user) || !password_verify($_POST['password'], $user->getPassword())){
+                $errors[] = "les identifiants ne sont pas valides" ;
+            }
+
+            if(count($errors) == 0){
+                
+                var_dump($user->getUser_ID());
+                var_dump($_SESSION['user']->getUser_ID());
+                header("Location: index.php");
+               
+            }
+            
+        }      
+    }
+
+    public function logout(){
+        session_unset();
+        session_destroy();
+        header("Location: index.php?controller=security&action=login");
+
     }
 
     public function register(){
