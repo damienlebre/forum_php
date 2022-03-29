@@ -5,7 +5,7 @@ class DbManager {
     private $dbHost = "localhost";
     private $dbName = "forum_php";
     private $dbUser = "root";
-    private $dbPass = "";
+    private $dbPass = "root";
 
 
     public function __construct(){

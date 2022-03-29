@@ -10,7 +10,7 @@ class SecurityController{
     }
 
     public function register(){
-
+        
 
         require 'Views/security/register.php';
     }

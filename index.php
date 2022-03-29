@@ -2,15 +2,8 @@
 
 
 // ============ Models ============
-require 'Models/User.php';
+require 'loader.php';
 
-
-// ============ Manager ============
-require 'Models/Managers/DBManager.php';
-require 'Models/Managers/UserManager.php';
-
-// ============ Controllers ============
-require 'Controllers/SecurityController.php';
 
 //view
 
@@ -34,8 +27,27 @@ if($_GET['controller'] == "security"){
 
 }
 
+//Poster une question
+if($_GET['controller'] == "question"){
 
+    $questionController = new QuestionController;
+ 
+     if($_GET['action'] == "addQuestion"){
+         $questionController->add();
+     }
 
+    }
+
+//Répondre à une question
+if($_GET['controller'] == "answer"){
+
+    $answerController = new AnswerController;
+ 
+     if($_GET['action'] == "addanswer"){
+         $questionController->add();
+     }
+
+    }
 
 
 ?>
