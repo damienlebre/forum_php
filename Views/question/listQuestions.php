@@ -1,15 +1,13 @@
 <html>
 <head>
 <?php
-include '../include.php';
+
 
 ?>
 </head>
 
 <body>
 <div class="container">
-    <p>je suis dans listQuestion</p>
-
     <table class="table">
         <thead>
             <th scope="col">Utilisateur</th>
