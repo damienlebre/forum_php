@@ -33,11 +33,7 @@ class SecurityController{
             if(count($errors) == 0){
                 
                 $_SESSION['user'] = $user;
-                var_dump($user->getUser_ID());
-                var_dump($_SESSION['user']->getUser_ID());
-
-
-                header("Location: index.php?controller=home");
+                header("Location: index.php?controller=question&action=listQuestion");
                
             }
             
