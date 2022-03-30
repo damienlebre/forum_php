@@ -1,5 +1,9 @@
 <?php
+
 require_once 'DBManager.php';
+
+require 'loader.php';
+
 
 class QuestionManager extends DbManager {
 

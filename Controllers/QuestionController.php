@@ -13,7 +13,13 @@
         // }
 
         public function listQuestion(){
-            return $this->questionManager->getAll();
             
+            $resultats = $this->questionManager->getAll();
+
+            require 'Views/question/listQuestions.php'; 
+           
+               
         }
+
+
     }
