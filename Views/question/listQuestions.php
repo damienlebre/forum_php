@@ -2,6 +2,7 @@
 <head>
 <?php
 
+session_start();
 
 ?>
 </head>
@@ -21,8 +22,14 @@
                 <td>'.$resultat->getAuthor_user_id().'</td>
                 <td>'.$resultat->getSubject().'</td>
                 <td>'.$resultat->getContent().'</td>
-                <td>'.$resultat->getPublication().'</td>
+                <td>'.$resultat->getPublication().'</td>');
 
+               
+
+            if(isset($_SESSION['user'])){
+                
+
+                echo('
                 <td>
                     <a title="Supprimer"  href="index.php?controller=question&action=delete&id='.$resultat->getId().'">
                         <i class="fa fa-trash"></i>
@@ -37,7 +44,11 @@
                     </a>
                 </td>
             </tr>');
-        }
+            }
+
+        }    
+                
+           
         ?>
          </tbody>
     </table>
