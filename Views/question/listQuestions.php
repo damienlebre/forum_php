@@ -1,14 +1,16 @@
 <html>
 <head>
 
+
 <?php
 @session_start();
+
 
 ?>
 
 </head>
 
-<body>
+<body class="bg-info">
 <div class="container">
     <table class="table">
         <thead>
