@@ -1,9 +1,6 @@
 <html>
 <head>
-<?php
 
-
-?>
 </head>
 
 <body>
@@ -42,6 +39,8 @@
          </tbody>
     </table>
 </div>
+
+<a href="Views\question\addQuestion.php">Poser une question</a>
 
 <script rel="script" src="Public/js/bootstrap.min.js"></script>
 </body>
