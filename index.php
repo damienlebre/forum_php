@@ -1,11 +1,12 @@
 <?php
 
+include "include.php";
 
 
 
 // ============ Models ============
-require 'loader.php';
-require 'views/menu.php';
+require './loader.php';
+require 'views/navbar.php';
 
 
 

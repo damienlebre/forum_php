@@ -1,18 +1,14 @@
 <html>
 <head>
-    <link rel="stylesheet" href="Public/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="Public/css/awesome/css/all.css"/>
+<?php
+include '../include.php';
+
+?>
 </head>
 
 <body>
 <div class="container">
     <p>je suis dans listQuestion</p>
-
-    <?php
-        
-              
-          
-    ?>
 
     <table class="table">
         <thead>
