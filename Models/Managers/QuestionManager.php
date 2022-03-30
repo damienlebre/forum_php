@@ -1,5 +1,5 @@
 <?php
-require '../loader.php';
+require 'loader.php';
 
 class QuestionManager extends DbManager {
 
