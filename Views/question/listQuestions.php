@@ -1,10 +1,11 @@
 <html>
 <head>
-<?php
 
+<?php
 session_start();
 
 ?>
+
 </head>
 
 <body>
@@ -53,6 +54,8 @@ session_start();
          </tbody>
     </table>
 </div>
+
+<a href="Views\question\addQuestion.php">Poser une question</a>
 
 <script rel="script" src="Public/js/bootstrap.min.js"></script>
 </body>

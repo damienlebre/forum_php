@@ -22,5 +22,7 @@
                
         }
 
-
+        public function addQuestion(){
+            header('Location: Views/question/addQuestion.php');
+        }
     }
