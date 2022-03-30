@@ -4,19 +4,8 @@
 
 
 // ============ Models ============
-require 'Models/User.php';
-require 'Models/Question.php';
-require 'Models/Answer.php';
-
-
-// ============ Manager ============
-require 'Models/Managers/DBManager.php';
-require 'Models/Managers/UserManager.php';
-require 'Models/Managers/QuestionManager.php';
-
-
-// ============ Controllers ============
-require 'Controllers/SecurityController.php';
+require 'loader.php';
+require 'views/menu.php';
 
 
 
@@ -58,8 +47,27 @@ if($_GET['controller'] == "security"){
 
 }
 
+//Poster une question
+// if($_GET['controller'] == "question"){
 
+//     $questionController = new QuestionController;
+ 
+//      if($_GET['action'] == "addQuestion"){
+//          $questionController->add("test");
+//      }
 
+//     }
+
+//Répondre à une question
+if($_GET['controller'] == "answer"){
+
+    // $answerController = new AnswerController;
+ 
+    //  if($_GET['action'] == "addanswer"){
+    //      $questionController->add("test");
+    //  }
+
+     }
 
 
 ?>
