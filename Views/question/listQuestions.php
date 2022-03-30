@@ -8,17 +8,7 @@ include '../include.php';
 
 <body>
 <div class="container">
-
-    <?php
-    require '../loader.php';
-    //include "Views/menu.php";
-    $resultats = new QuestionController;
-
-
-    
-    
-    
-    ?>
+    <p>je suis dans listQuestion</p>
 
     <table class="table">
         <thead>
@@ -28,7 +18,7 @@ include '../include.php';
             <th scope="col">Date</th>
         </thead>
     <?php
-        foreach ($resultats->listQuestion() as $resultat){
+        foreach ($resultats as $resultat){
             echo(' <tr>
                 <td>'.$resultat->getAuthor_user_id().'</td>
                 <td>'.$resultat->getSubject().'</td>

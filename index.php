@@ -48,16 +48,20 @@ if($_GET['controller'] == "security"){
 
 }
 
-//Poster une question
-// if($_GET['controller'] == "question"){
+// question
+if($_GET['controller'] == "question"){
 
-//     $questionController = new QuestionController;
+    $questionController = new QuestionController;
  
-//      if($_GET['action'] == "addQuestion"){
-//          $questionController->add("test");
-//      }
+     if($_GET['action'] == "listQuestion"){
+         $questionController->listQuestion();
+        
+     }
 
-//     }
+    }
+
+
+
 
 //Répondre à une question
 if($_GET['controller'] == "answer"){
