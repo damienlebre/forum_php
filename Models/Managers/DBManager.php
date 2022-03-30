@@ -1,6 +1,6 @@
 <?php
 
-class DbManager {
+class DBManager {
     protected $bdd;
     private $dbHost = "localhost";
     private $dbName = "forum_php";

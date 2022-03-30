@@ -1,7 +1,9 @@
 <html>
 <head>
-    <link rel="stylesheet" href="Public/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="Public/css/awesome/css/all.css"/>
+<?php
+include '../include.php';
+
+?>
 </head>
 
 <body>
@@ -13,7 +15,7 @@
     $resultats = new QuestionController;
 
 
-    var_dump($resultats->listQuestion());
+    
     
     
     ?>
