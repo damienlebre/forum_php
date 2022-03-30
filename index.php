@@ -38,6 +38,7 @@ if($_GET['controller'] == "security"){
     if($_GET['action'] == "login"){
         // TODO enlever le require
        require 'Views/security/login.php';
+       var_dump($_SESSION['user']);
         $securityController->login();
     }
 
@@ -54,10 +55,13 @@ if($_GET['controller'] == "question"){
     $questionController = new QuestionController;
  
      if($_GET['action'] == "listQuestion"){
+       
          $questionController->listQuestion();
         
      }
-
+    if($_GET['action']== "addQuestion"){
+       $questionController->addQuestion();
+    }
     }
 
 
