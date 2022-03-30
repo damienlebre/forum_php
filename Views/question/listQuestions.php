@@ -1,10 +1,13 @@
 <html>
 <head>
-<?php
 
-//session_start();
+
+<?php
+@session_start();
+
 
 ?>
+
 </head>
 
 <body class="bg-info">
@@ -53,6 +56,8 @@
          </tbody>
     </table>
 </div>
+
+<a href="index.php?controller=question&action=addQuestion">Poser une question</a>
 
 <script rel="script" src="Public/js/bootstrap.min.js"></script>
 </body>
