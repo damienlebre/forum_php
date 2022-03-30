@@ -6,16 +6,12 @@
 
 <body>
 <div class="container">
+    <p>je suis dans listQuestion</p>
 
     <?php
-    require '../loader.php';
-    //include "Views/menu.php";
-    $resultats = new QuestionController;
-
-
-    var_dump($resultats->listQuestion());
-    
-    
+        
+              
+          
     ?>
 
     <table class="table">
@@ -26,7 +22,7 @@
             <th scope="col">Date</th>
         </thead>
     <?php
-        foreach ($resultats->listQuestion() as $resultat){
+        foreach ($resultats as $resultat){
             echo(' <tr>
                 <td>'.$resultat->getAuthor_user_id().'</td>
                 <td>'.$resultat->getSubject().'</td>
