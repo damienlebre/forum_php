@@ -1,3 +1,6 @@
+<?php
+@session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +14,7 @@
 
         <form action="" method="post">
             <label for="question">Sujet :</label>
-            <input type="text" id="question" name="question" required>
+            <input type="text" id="question" name="subject" required>
 
             <label for="content">Votre question :</label>
             <textarea name="content" id="content" cols="30" rows="10" required></textarea>

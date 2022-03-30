@@ -19,7 +19,7 @@ class QuestionManager extends DbManager {
         return $arrayObjects;
     }
 
-     public function addQuestion(Question $question){
+     public function addQuestion($question){
 
       $query = $this->bdd->prepare("INSERT INTO questions ( subject, content, author_id, author_user_id, publication_date) VALUES (:subject, :content, :author_id, :author_user_id, :publication_date)");
             $query->execute([
@@ -27,7 +27,7 @@ class QuestionManager extends DbManager {
                 "content"=> $question->getContent(),
                 "author_id"=> $question->getAuthor_id(),
                 "author_user_id"=> $question->getAuthor_user_id(),
-                //"publication_date"=> $question->getPublication_date(),
+                "publication_date"=> $question->getPublication(),
             ]);
     }
 }

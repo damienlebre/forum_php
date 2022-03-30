@@ -2,7 +2,7 @@
 <head>
 
 <?php
-session_start();
+@session_start();
 
 ?>
 
@@ -55,7 +55,7 @@ session_start();
     </table>
 </div>
 
-<a href="Views\question\addQuestion.php">Poser une question</a>
+<a href="index.php?controller=question&action=addQuestion">Poser une question</a>
 
 <script rel="script" src="Public/js/bootstrap.min.js"></script>
 </body>
