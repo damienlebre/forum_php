@@ -1,9 +1,13 @@
-<?php 
+<?php
+
+
 
 
 // ============ Models ============
 require 'loader.php';
 require 'views/menu.php';
+
+
 
 //view
 
@@ -11,10 +15,14 @@ require 'views/menu.php';
 
 // les routeurs
 // page par defaut
-// if(empty($_GET)){
-    
-//     header('Location: index.php?controller=security&action=register');
-// }
+if(empty($_GET)){
+    header('Location: index.php?controller=home');
+}
+
+
+if($_GET['controller'] == "home"){
+    require 'Views/home/home.php';
+}
 
 
 //Login s'enregistrer
@@ -25,6 +33,17 @@ if($_GET['controller'] == "security"){
     if($_GET['action'] == "register"){
         $securityController->register();
     }
+
+    if($_GET['action'] == "login"){
+        // TODO enlever le require
+       require 'Views/security/login.php';
+        $securityController->login();
+    }
+
+    if($_GET["action"] == "logout"){
+        $securityController->logout();
+    }
+
 
 }
 
