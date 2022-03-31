@@ -26,7 +26,7 @@ if($_GET['controller'] == "home"){
 }
 
 
-//Login s'enregistrer
+// ===================== Security =====================
 if($_GET['controller'] == "security"){
 
    $securityController = new SecurityController;
@@ -35,11 +35,10 @@ if($_GET['controller'] == "security"){
         $securityController->register();
     }
 
-    if($_GET['action'] == "login"){
-        // TODO enlever le require
-       require 'Views/security/login.php';
+    if($_GET['action'] == "login"){             
     //    var_dump($_SESSION['user']);
         $securityController->login();
+       
     }
 
     if($_GET["action"] == "logout"){
@@ -49,7 +48,7 @@ if($_GET['controller'] == "security"){
 
 }
 
-// question
+// ===================== question =====================
 if($_GET['controller'] == "question"){
 
     $questionController = new QuestionController;
@@ -67,7 +66,7 @@ if($_GET['controller'] == "question"){
 
 
 
-//Répondre à une question
+// ===================== answer =====================
 if($_GET['controller'] == "answer"){
 
     // $answerController = new AnswerController;

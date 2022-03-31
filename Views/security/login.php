@@ -26,6 +26,25 @@
 
         <button type="submit">submit</button>
 
+        <!-- afficher les erreurs -->
+        <?php
+
+            if(($errors) != null){
+        ?>
+                <div class="container">
+                    <div class="row p-2">
+                        <div class="col-12 col-md-6 bg-danger text-white p-2">
+                        <?php
+                            foreach($errors as $error){                  
+                                echo ('<p>');
+                                echo($error);
+                            }
+            }           
+                        ?>
+                        </div>
+                    </div>       
+                </div>
+        
     </form>
 
 
