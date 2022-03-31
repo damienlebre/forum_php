@@ -29,7 +29,7 @@
             
           
             require 'Views/question/addQuestion.php';
-            var_dump($_SESSION['user']->getID());
+            // var_dump($_SESSION['user']->getID());
            
            
             $question = new Question(null, $_POST['subject'], $_POST['content'],$_SESSION['user']->getID(), $_SESSION['user']->getUser_ID(), date('Y-m-d H:i:s') );
