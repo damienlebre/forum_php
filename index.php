@@ -38,7 +38,6 @@ if($_GET['controller'] == "security"){
     if($_GET['action'] == "login"){
         // TODO enlever le require
        require 'Views/security/login.php';
-       var_dump($_SESSION['user']);
         $securityController->login();
     }
 
