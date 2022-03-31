@@ -82,6 +82,13 @@ class SecurityController{
 
         require 'Views/security/register.php';
     }
+
+    public function profil(){
+       // $user = $this->userManager->getByUsername($_SESSION['user']);
+       
+       
+        require 'Views/security/profil.php';
+    }
     
 
 }

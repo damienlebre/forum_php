@@ -27,5 +27,14 @@
                 "image"=> $user->getImage()
             ]);
         }
+
+        public function edit($user){
+            $query = $this->bdd->prepare("UPDATE users (email, password, image) VALUES (:email, :password, :image");
+            $query->execute([
+                "password"=> $user->getPassword(),
+                "email"=> $user->getEmail(),
+                "image"=> $user->getImage()
+            ]);
+        }
     }
 ?>

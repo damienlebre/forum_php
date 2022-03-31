@@ -30,7 +30,7 @@
                   </li
                   
                   <li class="nav-item">
-                  <a class="nav-link" href="index.php?controller=profil&action=profil">Bonjour '.$_SESSION['user']->getUser_ID().'</a>
+                  <a class="nav-link" href="index.php?controller=security&action=profil">Bonjour '.$_SESSION['user']->getUser_ID().'</a>
                   </li
     
                     ');

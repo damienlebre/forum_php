@@ -45,6 +45,9 @@ if($_GET['controller'] == "security"){
         $securityController->logout();
     }
 
+    if($_GET["action"] == "profil"){
+        $securityController->profil();
+    }
 
 }
 
@@ -63,6 +66,7 @@ if($_GET['controller'] == "question"){
     }
     }
 
+    
 
 
 
