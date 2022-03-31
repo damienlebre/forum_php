@@ -10,8 +10,9 @@ class SecurityController{
     }
 
     public function login(){
-        $errors = [];
 
+        $errors = [];
+      
         if($_SERVER['REQUEST_METHOD'] == 'POST' ){
 
             //si le user n'est pas rempli
@@ -22,22 +23,22 @@ class SecurityController{
             //si le password est  vide
             if(empty($_POST['password'])){
                 $errors[] = "Veuillez saisir un password";
+                
             }
 
             // recuperer le user dans la bdd
             $user = $this->userManager->getByUsername($_POST['username']);
-            if(is_null($user) || !password_verify($_POST['password'], $user->getPassword())){
-                $errors[] = "les identifiants ne sont pas valides" ;
+            if(is_null($user) || !password_verify($_POST['password'], $user->getPassword())){               
+                $errors[] = "les identifiants ne sont pas valides" ;            
             }
 
-            if(count($errors) == 0){
-                
-                $_SESSION['user'] = $user;
-                header("Location: index.php?controller=question&action=listQuestion");
-               
-            }
             
-        }      
+            if(count($errors) == 0){               
+                $_SESSION['user'] = $user;
+                header("Location: index.php?controller=question&action=listQuestion");              
+            }           
+        }  
+        require 'Views/security/login.php';       
     }
 
     public function logout(){
