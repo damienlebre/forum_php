@@ -27,14 +27,25 @@ if($_GET['controller'] == "security"){
         $securityController->register();
     }
 
+
     if($_GET['action'] == "login"){             
-    //    var_dump($_SESSION['user']);
-        $securityController->login();       
+
+
+        $securityController->login();
+       
+
     }
 
     if($_GET["action"] == "logout"){
         $securityController->logout();
     }
+
+
+
+    if($_GET["action"] == "profil"){
+        $securityController->profil();
+    }
+
 }
 
 // ===================== question =====================
@@ -49,7 +60,11 @@ if($_GET['controller'] == "question"){
     if($_GET['action']== "addQuestion"){
        $questionController->addQuestion();
     }
+    if($_GET['action']== "delete"){
+        $questionController->deleteQuestion();
+     }
 }
+
 
 // ===================== answer =====================
 if($_GET['controller'] == 'answer'){

@@ -29,7 +29,9 @@
                       <a class="nav-link" href="index.php?controller=question&action=MyQuestionList">Mes questions !</a>
                   </li
                   
-                  <li class="float-end">Bonjour '.$_SESSION['user']->getUser_ID().'</li
+                  <li class="nav-item">
+                  <a class="nav-link" href="index.php?controller=security&action=profil">Bonjour '.$_SESSION['user']->getUser_ID().'</a>
+                  </li
     
                     ');
             
