@@ -14,18 +14,12 @@ class AnswerManager extends DbManager {
         }
 
         public function getAll($id){
-                // SELECT * FROM `answers` WHERE `question_id`=11
-                
-                
-
+               
                 $query = $this->bdd->prepare("SELECT * FROM answers WHERE question_id = :id") ;
                 $query->execute([ "id"=> $id  ]);
 
                 $resultats = $query->fetchAll();
-
-                
-
-              
+            
                 return $resultats;
 
 

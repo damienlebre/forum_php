@@ -15,8 +15,8 @@
     
     <h1 class="text-center">Bienvenue sur SuperForum</h1>
 
-    <a href="index.php?controller=security&action=login">se connecter</a>
-    <button>s'enregistrer</button>
+    
+    
 
     <?php
        

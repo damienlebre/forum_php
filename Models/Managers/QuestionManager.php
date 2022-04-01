@@ -65,6 +65,20 @@ class QuestionManager extends DbManager {
 
     }
 
+
+
+    public function edit($object){
+        $query = $this->bdd->prepare("UPDATE questions SET subject = :subject WHERE id = :id");
+        $query->execute([
+            "id"=> $object->getID(),
+            "subject"=>$object->getSubject(),
+        ]);
+
+        var_dump($query);
+
+    }
+
+
     public function myQuestion($author_id){
         $arrayObjects = [];
         $query = $this->bdd->prepare("SELECT * FROM questions WHERE author_id = :author_id");
@@ -78,6 +92,7 @@ class QuestionManager extends DbManager {
         }
         return $resultats;
     }
+
 }
 
 

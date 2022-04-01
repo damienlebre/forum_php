@@ -37,11 +37,11 @@
                 <td>
                     <a class="btn btn-success" title="Répondre " href="index.php?controller=answer&action=add&id=<?= $resultat->getId() ?>" >Répondre</a>
 
-                    <a title="Supprimer"  href="index.php?controller=question&action=delete&id=<?= $resultat->getId() ?>">
+                    <a class="btn btn-danger" title="Supprimer"  href="index.php?controller=question&action=delete&id=<?= $resultat->getId() ?>">
                         <i class="fa fa-trash"></i>
                     </a>
                     
-                       <a title="Détail"  href="index.php?controller=question&action=detail&id=<?= $resultat->getId() ?>">
+                       <a class="btn btn-primary" title="Détail"  href="index.php?controller=question&action=detail&id=<?= $resultat->getId() ?>">
                         <i class="fa fa-eye"></i>
                     </a>
                         <!-- TODO enlever le bouton en fonction du profil -->
@@ -50,7 +50,7 @@
                         // var_dump($resultat->getAuthor_id());
                         if( $_SESSION['user']->getID() == $resultat->getAuthor_id() ){
                     ?>
-                            <a title="Editer"  href="index.php?controller=question&action=edit&id=<?= $resultat->getId() ?>">
+                            <a class="btn btn-warning" title="Editer"  href="index.php?controller=question&action=edit&id=<?= $resultat->getId() ?>">
                                 <i class="fa fa-edit"></i>
                             </a>
 
