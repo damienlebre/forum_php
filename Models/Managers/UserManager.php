@@ -30,8 +30,9 @@
         }
 
         public function edit($user){
-            $query = $this->bdd->prepare("UPDATE users (email, password, image) VALUES (:email, :password, :image");
+            $query = $this->bdd->prepare("UPDATE users SET user_id = :user_id, email = :email, password = :password, image = :image");
             $query->execute([
+                "user_id"=> $user->getUser_ID(),
                 "password"=> $user->getPassword(),
                 "email"=> $user->getEmail(),
                 "image"=> $user->getImage()
