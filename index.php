@@ -35,8 +35,9 @@ if($_GET['controller'] == "security"){
         $securityController->register();
     }
 
+
     if($_GET['action'] == "login"){             
-    //    var_dump($_SESSION['user']);
+
         $securityController->login();
        
     }
@@ -45,6 +46,9 @@ if($_GET['controller'] == "security"){
         $securityController->logout();
     }
 
+    if($_GET["action"] == "profil"){
+        $securityController->profil();
+    }
 
 }
 
@@ -63,6 +67,7 @@ if($_GET['controller'] == "question"){
     }
 }
 
+    
 
 
 
