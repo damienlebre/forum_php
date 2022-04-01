@@ -23,8 +23,6 @@ class AnswerController  {
                 var_dump( $errors);
             }
 
-        
-
             if(count($errors) == 0){                
                 $answer = new Answer(null, $_SESSION['user']->getID(), $_SESSION['user']->getUser_ID(), $_GET['id'], $_POST['content']  );
                 $this->answerManager->add($answer);                   
@@ -33,13 +31,25 @@ class AnswerController  {
 
         }
         
-
-
-        require 'Views/answer/addAnswer.php';
-        
-        
+        require 'Views/answer/addAnswer.php';       
+       
     }
 
-   
+    public function detail($id){
+
+        
+
+        $question = $this->questionManager->getOne($id);
+        $answers = $this->answerManager->getAll($id);
+        
+        if($answers !=null){
+            require 'Views/answer/detailAnswer.php';
+
+        } else {
+            echo 'pas de réponse encore';
+        }
+
+       
+    }
 
 }
