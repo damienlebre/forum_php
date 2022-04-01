@@ -52,6 +52,7 @@ if($_GET['controller'] == "security"){
 if($_GET['controller'] == "question"){
 
     $questionController = new QuestionController;
+    $answerController = new AnswerController;
  
      if($_GET['action'] == "listQuestion"){
          $questionController->listQuestion();        
@@ -63,6 +64,10 @@ if($_GET['controller'] == "question"){
     if($_GET['action']== "delete"){
         $questionController->deleteQuestion();
      }
+
+     if($_GET['action'] == 'detail' && array_key_exists("id", $_GET)){
+        $answerController->detail($_GET["id"]);
+    }
 }
 
 
@@ -74,6 +79,8 @@ if($_GET['controller'] == 'answer'){
     if($_GET['action'] == 'add' && array_key_exists("id", $_GET)){
         $answerController->add($_GET["id"]);
     }
+
+    
 
    
 }
