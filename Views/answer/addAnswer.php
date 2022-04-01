@@ -17,7 +17,7 @@
     ?> -->
     
     <?php
-    // var_dump($question);
+    
 
     echo "Sujet : " . $question->getSubject() . " <br> ";
     echo "Contenu : " . $question->getContent() . " <br> ";
