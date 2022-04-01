@@ -19,16 +19,23 @@ class QuestionManager extends DbManager {
         return $arrayObjects;
     }
 
-     public function addQuestion($question){
+    public function addQuestion($question){
 
-      $query = $this->bdd->prepare("INSERT INTO questions ( subject, content, author_id, author_user_id, publication_date) VALUES (:subject, :content, :author_id, :author_user_id, :publication_date)");
+      $query = $this->bdd->prepare("INSERT INTO questions (subject, content, author_id, author_user_id, publication_date) VALUES (:subject, :content, :author_id, :author_user_id, :publication_date)");
             $query->execute([
+                
                 "subject"=> $question->getSubject(),
                 "content"=> $question->getContent(),
                 "author_id"=> $question->getAuthor_id(),
                 "author_user_id"=> $question->getAuthor_user_id(),
                 "publication_date"=> $question->getPublication(),
             ]);
+    }
+
+    public function deleteQuestion($id){
+        $query = $this->bdd->prepare("DELETE FROM questions WHERE id = :id");
+        $query->execute(["id"=>$id]);
+
     }
 }
 

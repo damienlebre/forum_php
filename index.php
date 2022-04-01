@@ -65,6 +65,9 @@ if($_GET['controller'] == "question"){
     if($_GET['action']== "addQuestion"){
        $questionController->addQuestion();
     }
+    if($_GET['action']== "delete"){
+        $questionController->deleteQuestion();
+     }
 }
 
     
