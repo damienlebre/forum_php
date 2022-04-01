@@ -2,16 +2,9 @@
 
 include_once "include.php";
 
-
-
 // ============ Models ============
 require './loader.php';
 require 'views/navbar.php';
-
-
-
-//view
-
 
 
 // les routeurs
@@ -19,7 +12,6 @@ require 'views/navbar.php';
 if(empty($_GET)){
     header('Location: index.php?controller=home');
 }
-
 
 if($_GET['controller'] == "home"){
     require 'Views/home/home.php';
@@ -38,13 +30,17 @@ if($_GET['controller'] == "security"){
 
     if($_GET['action'] == "login"){             
 
+
         $securityController->login();
        
+
     }
 
     if($_GET["action"] == "logout"){
         $securityController->logout();
     }
+
+
 
     if($_GET["action"] == "profil"){
         $securityController->profil();
@@ -58,10 +54,9 @@ if($_GET['controller'] == "question"){
     $questionController = new QuestionController;
  
      if($_GET['action'] == "listQuestion"){
-       
-         $questionController->listQuestion();
-        
+         $questionController->listQuestion();        
      }
+
     if($_GET['action']== "addQuestion"){
        $questionController->addQuestion();
     }
@@ -70,20 +65,15 @@ if($_GET['controller'] == "question"){
      }
 }
 
-    
-
-
 
 // ===================== answer =====================
-if($_GET['controller'] == "answer"){
+if($_GET['controller'] == 'answer'){
 
-    // $answerController = new AnswerController;
- 
-    //  if($_GET['action'] == "addanswer"){
-    //      $questionController->add("test");
-    //  }
+    $answerController = new AnswerController ;
 
-     }
+    if($_GET['action'] == 'add' && array_key_exists("id", $_GET)){
+        $answerController->add($_GET["id"]);
+    }
 
-
-?>
+   
+}
