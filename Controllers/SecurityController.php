@@ -65,8 +65,6 @@ class SecurityController{
             // si pas d'erreurs ajouter le username dans la bdd
             if(count($errors) == 0){
 
-                //TODO image
-                $image = "12";
 
                 // hash du pawwsword
                 $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);

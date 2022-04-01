@@ -64,6 +64,19 @@ class QuestionManager extends DbManager {
         $query->execute(["id"=>$id]);
 
     }
+
+
+    public function edit($object){
+        $query = $this->bdd->prepare("UPDATE questions SET subject = :subject WHERE id = :id");
+        $query->execute([
+            "id"=> $object->getID(),
+            "subject"=>$object->getSubject(),
+        ]);
+
+        var_dump($query);
+
+    }
+
 }
 
 
