@@ -19,9 +19,34 @@ class QuestionManager extends DbManager {
         return $arrayObjects;
     }
 
-     public function addQuestion($question){
+    // recuperer une question
+    public function getOne($id){
+        $retour = null;
 
-      $query = $this->bdd->prepare("INSERT INTO questions ( subject, content, author_id, author_user_id, publication_date) VALUES (:subject, :content, :author_id, :author_user_id, :publication_date)");
+        $req = $this->bdd->prepare("SELECT * FROM questions WHERE id = :id");
+
+        $req->execute([
+            "id"=> $id
+        ]);
+
+        $resultat = $req->fetch();
+
+        if($resultat){
+            $retour = new Question($resultat["id"], $resultat["subject"],
+                $resultat["content"], $resultat["author_id"], $resultat["author_user_id"], $resultat["publication_date"]
+            );
+        }
+
+       return $retour;
+   }
+
+
+    
+
+
+    public function addQuestion($question){
+
+        $query = $this->bdd->prepare("INSERT INTO questions ( subject, content, author_id, author_user_id, publication_date) VALUES (:subject, :content, :author_id, :author_user_id, :publication_date)");
             $query->execute([
                 "subject"=> $question->getSubject(),
                 "content"=> $question->getContent(),

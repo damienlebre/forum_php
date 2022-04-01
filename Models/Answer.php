@@ -8,11 +8,15 @@ class Answer{
 
     public function __construct($id, $author_id, $author_user_id, $question_id, $content)
     {
-        
+        $this->id = $id;
+        $this->author_id = $author_id;
+        $this->author_user_id = $author_user_id;
+        $this->question_id = $question_id;
+        $this->content = $content;
     }
 
 
-    public function getID(){
+    public function get_id(){
         return $this->id;
     }
 

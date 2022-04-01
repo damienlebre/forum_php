@@ -1,50 +1,45 @@
 <?php
-// class AnswerController extends AuthenticatedController {
+class AnswerController  {
 
-//     private $answerManager;
+    private $answerManager;
 
-//     public function __construct()
-//     {
-//         parent::__construct();
-//         $this->answerManager = new AnswerManager();
-//     }
+    public function __construct()
+    {
+        $this->answerManager = new AnswerManager();
+        $this->questionManager = new QuestionManager();
+    }
 
-//     public function listTopic(){
+    public function add($id){
+        // recupérer la bonne question avec le bon id
+        $question = $this->questionManager->getOne($id);
 
-//         $answers = $this->answerManager->getAll();
+        $errors=[];
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-//         require 'Views/answers/list.php';
-//     }
+             //si la reponse n'est pas vide
+             if(empty($_POST['content'])){
+                $errors[] = "Veuillez renseigner le sujet de votre réponse.";
+                var_dump( $errors);
+            }
 
-//     public function detail($id){
-//         $answer = $this->answerManager->getOne($id);
+        
 
-//          require 'Views/answers/detail.php';
+            if(count($errors) == 0){                
+                $answer = new Answer(null, $_SESSION['user']->getID(), $_SESSION['user']->getUser_ID(), $_GET['id'], $_POST['content']  );
+                $this->answerManager->add($answer);                   
+             header("Location: index.php?controller=question&action=listQuestion");           
+            }  
 
-//     }
-
-//     public function delete($id)
-//     {
-//         $this->topicManager->delete($id);
-
-//         header("Location: index.php?controller=answer&action=list");
-//     }
-
-//     public function add()
-//     {
-//         $errors = [];
-
-//         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            
-//             if(empty($_POST["contenu"])){
-//                 $errors[] = "Veuillez saisir une réponse";
-//             }
-            
-//         }
-
-//         require "Views/answers/addAnswer.php";
+        }
+        
 
 
-//     }
+        require 'Views/answer/addAnswer.php';
+        
+        
+    }
 
-// }
+   
+
+}
