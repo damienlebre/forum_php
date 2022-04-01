@@ -68,6 +68,9 @@ if($_GET['controller'] == "question"){
      if($_GET['action'] == 'detail' && array_key_exists("id", $_GET)){
         $answerController->detail($_GET["id"]);
     }
+    if($_GET['action'] == "MyQuestionList"){
+        $questionController->myQuestion();        
+    }
 }
 
 
