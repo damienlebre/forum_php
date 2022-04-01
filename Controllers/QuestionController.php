@@ -51,6 +51,7 @@
             
         }    
 
+
         public function edit(){
             $errors = [];
 
@@ -72,6 +73,17 @@
         }
 
 
+
+
+        public function myQuestion(){
+            
+            $resultats = $this->questionManager->myQuestion($_SESSION['user']->getID());
+          
+            
+            require 'Views/question/myQuestion.php';
+            
+        }
+        
 
 
     }

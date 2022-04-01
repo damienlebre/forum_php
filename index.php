@@ -70,10 +70,16 @@ if($_GET['controller'] == "question"){
         $answerController->detail($_GET["id"]);
     }
 
+
     if($_GET['action'] == 'edit' && array_key_exists("id", $_GET)){
         $questionController->edit($_GET["id"]);
     }
     
+
+    if($_GET['action'] == "MyQuestionList"){
+        $questionController->myQuestion();        
+    }
+
 }
 
 
