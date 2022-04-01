@@ -45,4 +45,12 @@
            
         }
 
+        public function deleteQuestion(){
+          
+                $this->questionManager->deleteQuestion($_GET['id']);
+
+                header("Location: Index.php?controller=question&action=listQuestion");
+            
+        }    
+
     }
