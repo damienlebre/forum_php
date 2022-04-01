@@ -79,8 +79,8 @@
                 
                 <!-- Ajouter une photo de profil-->
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Ajouter/modifier une image de profil</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <label for="formFile" class="form-label" >Ajouter/modifier une image de profil</label>
+                    <input class="form-control" type="file" id="formFile" name="image">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Enregistrer</button>
