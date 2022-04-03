@@ -7,6 +7,7 @@ require './loader.php';
 require 'views/navbar.php';
 
 
+
 // les routeurs
 // page par defaut
 if(empty($_GET)){
@@ -93,3 +94,4 @@ if($_GET['controller'] == 'answer'){
     }
    
 }
+require 'views/footer.php';
