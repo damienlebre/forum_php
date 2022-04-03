@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    background-color: #131418;
+    /* display: flex; */
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    align-self: baseline;
+    
+}
+
+.footer .call-action .inner-content {
+    padding: 30px 0px 20px 0px;
+    /* border-bottom: 1px solid #f73164; */
+}
+.footer .call-action .inner-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    color: #fff;
+}
+.align-center {
+    text-align: center;
+}
+.footer .call-action .inner-content p {
+    color: rgba(255, 255, 255, .7);
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.footer .call-action .inner-content .button {
+    /* float: right; */
+    margin-top: 50px;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.button .btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #FE9600;;
+    color: #fff;
+    border: none;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+.footer .call-action .inner-content .button .btn:hover {
+    background-color: #fff;
+    color: #6f4ef2;
+  box-shadow: 0 1rem 3rem rgb(35 38 45 / 15%) !important;
+    transform: translate3d(0, -5px, 0);
+}
+.footer .footer-middle {
+    padding-bottom: 90px;
+    padding-top: 50px;
+}
+.footer  {
+    margin-top: 30px;
+}
+.footer .single-footer h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.footer .f-link ul li {
+    margin-bottom: 18px;
+    position: relative;
+  
+}
+.footer .f-link ul li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  
+}
+a {
+    text-decoration: none !important;
+}
+.footer .f-link ul li a:hover {
+    color: #f73164;
+    padding-left: 15px;
+}
+.footer .single-footer {
+    margin-top: 30px;
+}
+.footer .logo {
+    margin-bottom: 26px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.footer .logo img {
+    width: 120px;
+}
+.footer .f-about p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+.footer .footer-social {
+    margin-top: 35px;
+    text-align: center;
+}
+.footer .footer-social ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.footer .footer-social ul li a {
+    font-size: 15px;
+    display: block;
+    background: 0 0;
+    border: none;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+}
+.lni-facebook-original::before {
+    content: "\eab4";
+}
+.footer .footer-social ul li a:hover {
+    color: #f73164;
+}
+.footer .footer-social ul li:last-child {
+    margin-right: 0;
+}
+.lni-google::before {
+    content: "\eb04";
+}
+.lni-linkedin-original::before {
+    content: "\eb14";
+}
+.lni-twitter-original::before {
+    content: "\ebd7";
+}
+.footer .footer-bottom {
+    padding: 30px 0;
+    background-color: #6f4ef2;
+}
+.footer .footer-bottom .inner {
+    text-align: center;
+}
+.footer .footer-bottom .inner p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer .footer-bottom .inner p a {
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 6px;
+    color: #fff;
+}
+.footer .footer-bottom .inner p a:hover {
+    text-decoration: underline !important;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+.footer .call-action .inner-content {
+    padding: 60px 0;
+}
+  .footer .call-action .inner-content h2 {
+    font-size: 22px;
+}
+  .footer .call-action .inner-content p {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+}
+  .footer .call-action .inner-content .button .btn {
+    font-size: 13px;
+}
+  .footer .footer-middle {
+    padding-bottom: 70px;
+    padding-top: 0;
+}
+  .footer .single-footer {
+    padding-top: 35px;
+    margin-top: 35px;
+}
+  .footer .f-link ul li {
+    margin-bottom: 13px;
+}
+  .footer .single-footer.md-custom-border {
+    border-top: 1px dashed #eeeeee52;
+}
+  .footer .single-footer {
+    padding-top: 35px;
+    margin-top: 35px;
+}
+  .footer .f-about p {
+    padding-right: 0;
+    line-height: 24px;
+}
+  .button .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+}
+@media only screen and (max-width: 767px){
+.footer .call-action .inner-content {
+    padding: 60px 0;
+}
+}
+.footer .call-action .inner-content h2 {
+    font-size: 22px;
+}
+.footer .call-action .inner-content p {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+}
+.footer .call-action .inner-content .button {
+    /* float: left; */
+    margin-top: 30px;
+}
+.footer .call-action .inner-content .button .btn {
+    font-size: 13px;
+}
+.button .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer .footer-middle {
+    padding-bottom: 70px;
+    padding-top: 0;
+}
+.footer .single-footer.sm-custom-border {
+    border-top: 1px dashed #eeeeee52;
+}
+.footer .single-footer {
+    padding-top: 25px;
+    margin-top: 25px;
+}
+.footer .f-link ul li {
+    margin-bottom: 13px;
+}
+.footer .single-footer {
+    /* padding-top: 25px; */
+    margin-top: 25px;
+}
+.footer .f-about p {
+    padding-right: 0;
+    line-height: 24px;
+}
+

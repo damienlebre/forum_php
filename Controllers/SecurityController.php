@@ -70,7 +70,7 @@ class SecurityController{
                 $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
             
                 // creation du nouveau user
-                $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,$image);
+                $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,null);
                 
                 // ajout du nouveau user dans la bdd
                 $this->userManager->add($user);      

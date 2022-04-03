@@ -7,10 +7,10 @@
 
 
 ?>
-
+<link rel="stylesheet" href="Public\css\myQuestion.css">
 </head>
 
-<body class="bg-info">
+<body class="main-bg">
 <div class="container">
     <table class="table">
         <thead>
