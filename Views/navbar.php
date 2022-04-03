@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="Public\css\nav.css">
 
 <nav>
-      <div class="logo">
-          <a href="index.php"><img src="Public\assets\logo\logo.png" alt="Logo Image"></a>
+      <div class="logo d-flex align-items-center" >
+          <a href="index.php" class=""><img src="Public\assets\logo\logo.png" alt="Logo Image"></a>
       </div>
       <div class="hamburger">
           <div class="line1"></div>
