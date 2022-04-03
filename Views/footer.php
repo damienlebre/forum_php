@@ -9,7 +9,8 @@
                         <div class="col-12 align-center">
                             <h2>The SuperForum</h2>
                             <p>Projet PHP réalisé en équipe.</p> 
-                            <p>Crédits: MARBOUTIN Pierre, GRANGEON Cyril et LEBRE Damien.</p>                              
+                            <p>Coded by MARBOUTIN Pierre, GRANGEON Cyril et LEBRE Damien.</p>
+                            <p>Designed by LEBRE Damien.</p>                                
                             <p>Formation DWWM CCI Brioude 2021/2022.</p>
                         </div>
                         <div class="col-12 align-center">
