@@ -1,8 +1,8 @@
 <html>
 <head>
-
+ <link rel="stylesheet" href="Public\css\detailQuestion.css">
 </head>
-<body>
+<body class="main-bg">
 <div class="container">
    
 

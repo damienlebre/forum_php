@@ -5,10 +5,10 @@
 <?php
     @session_start();
 ?>
-
+ <link rel="stylesheet" href="Public\css\editQuestion.css">
 </head>
 
-<body class="bg-info">
+<body class="main-bg">
 <div class="container">
   
     <div class="row">

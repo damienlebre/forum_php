@@ -7,9 +7,10 @@
 <html>
 <head>
     <link rel="stylesheet" href="Public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Public\css\addAnswer.css">
     
 </head>
-<body>
+<body class="main-bg">
 
 <div class="container">
     <!-- <?php

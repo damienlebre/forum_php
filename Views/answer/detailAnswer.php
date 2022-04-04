@@ -1,15 +1,15 @@
 <?php
     @session_start();
-
+ 
 ?>
 
 
 <html>
 <head>
     <link rel="stylesheet" href="Public/css/bootstrap.min.css"/>
-    
+    <link rel="stylesheet" href="Public\css\detailAnswer.css">
 </head>
-<body>
+<body class="main-bg">
 
 <div class="container">
     <!-- <?php
