@@ -36,8 +36,8 @@
                 echo('
                 <td>
                     <a title="Répondre " href="index.php?controller=answer&action=add&id='.$resultat['id'].'" >Répondre</a>
-
-                 
+                    <a title="Modifier " href="index.php?controller=question&action=edit&id='.$resultat['id'].'" >Modifier</a>
+                    <a title="Supprimer " href="index.php?controller=question&action=delete&id='.$resultat['id'].'" >Supprimer</a>                 
                 </td>
             </tr>');
             }

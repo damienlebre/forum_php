@@ -1,13 +1,13 @@
 
 .main-bg {
-
     background: #424242;
-    background: linear-gradient( #424242, #212121);
+    background: linear-gradient( #424242, #212121);     
 }
 
-.masthead {
-    padding-top: calc(6rem + 74px);
+ .masthead {
+    padding-top: 3rem ;
     padding-bottom: 6rem;
+   
   }
   .masthead .masthead-heading {
     font-size: 2.75rem;
@@ -22,7 +22,7 @@
   
   @media (min-width: 992px) {
     .masthead {
-      padding-top: calc(6rem + 104px);
+      padding-top: 3rem;
       padding-bottom: 6rem;
     }
     .masthead .masthead-heading {
@@ -64,4 +64,4 @@
   .divider-custom.divider-light .divider-custom-icon {
     color: #fff;
   }
- 
+  
