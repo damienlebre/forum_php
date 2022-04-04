@@ -78,8 +78,10 @@
                 require 'Views/security/register.php';
             }
 
+
             public function profil(){
             $errors =[];
+
 
             if($_SERVER["REQUEST_METHOD"]=="POST"){
                 // verifier qu'il n'y a pas deux usernames identique
@@ -92,6 +94,7 @@
                     $errors[] = "Les mots de passe ne sont pas identiques";
                 }
             
+
                 if(isset($_POST['submit'])){
                     var_dump($_FILES);
                     $file = $_FILES['image'];
@@ -113,6 +116,7 @@
                     }
                    
                 }
+
                 
 
 

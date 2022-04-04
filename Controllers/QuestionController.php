@@ -16,8 +16,7 @@
         }
 
         public function addQuestion(){        
-          
-            
+                   
             $errors=[];
     
             if($_SERVER["REQUEST_METHOD"]=='POST'){
@@ -40,10 +39,9 @@
            
             }
           require 'Views/question/addQuestion.php';
-
-        
-           
+          
         }
+
 
         public function deleteQuestion(){
           
@@ -52,5 +50,40 @@
                 header("Location: Index.php?controller=question&action=listQuestion");
             
         }    
+
+
+        public function edit(){
+            $errors = [];
+
+            $subject=  $this->questionManager->getOne($_GET['id']);
+
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                // On vérifie les données saisies dans notre formulaire
+                if(empty($_POST["label"])){
+                    $errors[] = 'Veuillez saisir un label de category';
+                }
+
+            $subject->setSubject($_POST["subject"])  ;
+
+            $this->questionManager->edit($subject);
+    
+            }
+
+            require 'Views/question/editQuestion.php';
+        }
+
+
+
+
+        public function myQuestion(){
+            
+            $resultats = $this->questionManager->myQuestion($_SESSION['user']->getID());
+          
+            
+            require 'Views/question/myQuestion.php';
+            
+        }
+        
+
 
     }

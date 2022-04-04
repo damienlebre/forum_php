@@ -53,17 +53,34 @@ if($_GET['controller'] == "security"){
 if($_GET['controller'] == "question"){
 
     $questionController = new QuestionController;
+    $answerController = new AnswerController;
  
-     if($_GET['action'] == "listQuestion"){
+    if($_GET['action'] == "listQuestion"){
          $questionController->listQuestion();        
      }
 
     if($_GET['action']== "addQuestion"){
        $questionController->addQuestion();
     }
+
     if($_GET['action']== "delete"){
         $questionController->deleteQuestion();
      }
+
+     if($_GET['action'] == 'detail' && array_key_exists("id", $_GET)){
+        $answerController->detail($_GET["id"]);
+    }
+
+
+    if($_GET['action'] == 'edit' && array_key_exists("id", $_GET)){
+        $questionController->edit($_GET["id"]);
+    }
+    
+
+    if($_GET['action'] == "MyQuestionList"){
+        $questionController->myQuestion();        
+    }
+
 }
 
 
@@ -75,6 +92,6 @@ if($_GET['controller'] == 'answer'){
     if($_GET['action'] == 'add' && array_key_exists("id", $_GET)){
         $answerController->add($_GET["id"]);
     }
-
    
 }
+require 'views/footer.php';
