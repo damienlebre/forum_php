@@ -35,9 +35,11 @@
 
                 echo('
                 <td>
-                    <a title="Répondre " href="index.php?controller=answer&action=add&id='.$resultat['id'].'" >Répondre</a>
-                    <a title="Modifier " href="index.php?controller=question&action=edit&id='.$resultat['id'].'" >Modifier</a>
-                    <a title="Supprimer " href="index.php?controller=question&action=delete&id='.$resultat['id'].'" >Supprimer</a>                 
+                    <a class="btn btn-success" title="Répondre " href="index.php?controller=answer&action=add&id='.$resultat['id'].'" >Répondre</a>
+                    <a class="btn btn-warning" title="Modifier " href="index.php?controller=question&action=edit&id='.$resultat['id'].'" >Modifier <i class="fa fa-edit"></i></a>
+                    <a class="btn btn-danger" title="Supprimer " href="index.php?controller=question&action=delete&id='.$resultat['id'].'" >Supprimer <i class="fa fa-trash"></i></a>                 
+                    <a class="btn btn-primary" title="Détail " href="index.php?controller=question&action=detail&id='.$resultat['id'].'" >Détail <i class="fa fa-edit"></i></a>
+                </a>
                 </td>
             </tr>');
             }
