@@ -55,17 +55,34 @@
         public function edit(){
             $errors = [];
 
-            $subject=  $this->questionManager->getOne($_GET['id']);
+            $subject =  $this->questionManager->getOne($_GET['id']);
+            
 
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // On vérifie les données saisies dans notre formulaire
-                if(empty($_POST["label"])){
-                    $errors[] = 'Veuillez saisir un label de category';
-                }
+                // if(empty($_POST["subject"])){
+                //     $errors[] = 'Veuillez saisir un sujet';
+                // }
 
-            $subject->setSubject($_POST["subject"])  ;
+            if( $_POST["subject"] === ''){
+                $subject->getSubject();
 
-            $this->questionManager->edit($subject);
+            } else {
+                $subject->setSubject($_POST["subject"])  ;
+                $this->questionManager->edit($subject);
+            }
+
+            if( $_POST["content"] === '' ){
+                $subject->getContent();
+            } else {
+                $subject->setContent($_POST["content"])  ;
+                $this->questionManager->edit($subject);
+            }
+                
+            
+               
+          
+            
     
             }
 
