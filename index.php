@@ -7,6 +7,7 @@ require './loader.php';
 require 'views/navbar.php';
 
 
+
 // les routeurs
 // page par defaut
 if(empty($_GET)){
