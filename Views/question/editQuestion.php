@@ -25,15 +25,8 @@
                 <form method="post" >
                     <div class="py-4">
                         <p>Le sujet : <?= $subject->getSubject(); ?></p>
-                       
-                        
-                        <!--  si le pen est cliqué afficher input de modif -->
                         <input class="text-black py-2" id="subject" name="subject" type="text" placeholder="Modifier le sujet">
-                        <button type="submit" class="btn btn-danger" title="Envoyer la modification">Envoyer</button>
-
-
-                       
-                    
+                        <button type="submit" class="btn btn-danger" title="Envoyer la modification">Envoyer</button>               
                     </div>
 
                     <div class="py-4">
@@ -43,6 +36,11 @@
                     </div>
                       
                 </form>
+
+               
+                <a class="btn btn-danger" href="index.php?controller=question&action=listQuestion" role="button">Retour à la liste de questions</a>    
+                
+               
 
 
 
