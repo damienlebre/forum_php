@@ -28,14 +28,15 @@
                 "image"=> $user->getImage()
             ]);
         }
-        //UPDATE `users` SET `id`='[value-1]',`user_id`='[value-2]',`email`='[value-3]',`password`='[value-4]',`image`='[value-5]' WHERE 1
+        
         public function edit($user){
-            var_dump($user);
-            var_dump($_SESSION);
+            // var_dump($user);
+            // var_dump($_SESSION);
+            // var_dump($_SESSION['user']->getID());
             
             $query = $this->bdd->prepare("UPDATE users SET  user_id = :user_id, email = :email, password = :password, image = :image WHERE id = :id");
             $query->execute([
-                "id" => $_SESSION['user']->getID(),
+                "id" => $user->getID(),
                 "user_id"=> $user->getUser_ID(),
                 "password"=> $user->getPassword(),
                 "email"=> $user->getEmail(),

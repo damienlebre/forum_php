@@ -23,7 +23,7 @@
     <div class="d-flex justify-content-center">
         <div class="row ">
              <div class="card text-center" style="width: 18rem;">
-                <img src="<?php ($_SESSION['user']->getImage())?> " class="card-img-top" alt="...">
+                <img src="Public/uploads/<?php echo($_SESSION['user']->getImage())?> " class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?=$_SESSION['user']->getUser_ID()?></h5>
             </div>
@@ -41,7 +41,7 @@
 
 <div class="d-flex justify-content-center">
     <div class="row ">
-        <form method="post">
+        <form enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label for="username" class="form-label">Nouveau Login : </label>
                     <input class="form-control" id="username" name="username" type="text">
@@ -84,7 +84,7 @@
                     <input class="form-control" type="file" id="formFile" name="image">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <button type="submit" name="submit" class="btn btn-primary">Enregistrer</button>
 
             </form>
     </div>
