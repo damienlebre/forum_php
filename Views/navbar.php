@@ -26,6 +26,7 @@
             if(isset($_SESSION['user'])){
                 echo('
                     <li><a href="index.php?controller=question&action=MyQuestionList">Mes questions</a></li>
+                    <li><a href="index.php?controller=security&action=profil">Mon profil</a></li>
                     <li><a href="index.php?controller=security&action=logout"><button class="logout-button">Se déconnecter</button></a></li>
                 ');
             }else{
