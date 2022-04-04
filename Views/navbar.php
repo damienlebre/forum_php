@@ -19,7 +19,7 @@
       </div>
       <ul class="nav-links">
          
-          <li><a href="index.php">Acceuil</a></li>
+          <li><a href="index.php">Accueil</a></li>
           <li><a href="index.php?controller=question&action=listQuestion">Listes des Questions</a></li>
           <?php
 
