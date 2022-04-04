@@ -35,7 +35,9 @@
     ?>
                 
                 <td>
-                    <a class="btn btn-success" title="Répondre " href="index.php?controller=answer&action=add&id=<?= $resultat->getId() ?>" >Répondre</a>
+                    <a class="btn btn-success" title="Répondre " href="index.php?controller=answer&action=add&id=<?= $resultat->getId() ?>" >
+                    <i class="fa-solid fa-plus"></i>
+                    </a>
 
                     <a class="btn btn-danger" title="Supprimer"  href="index.php?controller=question&action=delete&id=<?= $resultat->getId() ?>">
                         <i class="fa fa-trash"></i>
