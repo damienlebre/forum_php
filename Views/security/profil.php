@@ -9,9 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Public\assets\logo\favicon.png"/>
+    <link rel="stylesheet" href="Public\css\profil.css">
     <title>Votre profil</title>
 </head>
-<body>
+<body class="main-bg">
     
 
 <h1 class="text-center">Bienvenue sur votre profil <?=$_SESSION['user']->getUser_ID()?></h1>

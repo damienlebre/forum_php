@@ -85,7 +85,7 @@
 
             if($_SERVER["REQUEST_METHOD"]=="POST"){
                 // verifier qu'il n'y a pas deux usernames identique
-                if(!is_null($this->userManager->getByUsername($_POST['mail']))){
+                if(!is_null($this->userManager->getByUsername($_POST['username']))){
                     $errors[]  = "Un compte avec ce nom d'utilisateur existe déjà";
                 }
 
@@ -94,10 +94,9 @@
                     $errors[] = "Les mots de passe ne sont pas identiques";
                 }
             
-
+                $fileNameNew = "";
                 if(isset($_POST['submit'])){
-                    var_dump($_FILES);
-                    $file = $_FILES['image'];
+                    
                     $fileName = $_FILES['image']['name'];
                     $fileTmpName = $_FILES['image']['tmp_name'];
                     $fileSize = $_FILES['image']['size'];
@@ -116,38 +115,46 @@
                     }
                    
                 }
-
                 
-
-
-
-            
-            // si pas d'erreurs ajouter le username dans la bdd
-            if(count($errors) == 0){
-
-                
-
-
-                // hash du pawwsword
-                $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                // Conserver les infos existante si on ne les modifie pas
-                
-                // creation du nouveau user
-                if(is_null($_POST['username'])){
-                    $newUserName = $_SESSION['user']->getUser_ID();
-                }else{
-                    $newUserName = $_POST['username'];
+                // si pas d'erreurs ajouter le username dans la bdd
+                if(count($errors) == 0){
+                    var_dump($_POST);
+                  
+                    
+                    // Conserver les infos existante si on ne les modifie pas
+                    
+                    // Modification du profil
+                    if($_POST['username'] === ""){
+                        $newUserName = $_SESSION['user']->getUser_ID();
+                        var_dump($newUserName);
+                    }else{
+                        $newUserName = $_POST['username'];
+                    }
+                   
+                    if($_POST['mail'] === ""){
+                        $newMail = $_SESSION['user']->getEmail();
+                        
+                    }else{
+                        $newMail = $_POST['mail'];
+                        
+                    }
+                    if($_POST['password'] === ""){
+                        $newPassword = $_SESSION['user']->getPassword();
+                        
+                    }else{
+                        $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                    }
+                    var_dump($_POST);
+                    var_dump($_SESSION);
+                    $user = new User($_SESSION['user']->getID(), $newUserName, $newMail, $newPassword , $fileNameNew);
+                    $_SESSION['user'] = $user;
+                    // modif de user dans la bdd
+                    $this->userManager->edit($user);      
                 }
-                $user = new User(null, $newUserName, $_POST['mail'], $hash , $fileNameNew);
-                $_SESSION['user'] = $user;
-                // modif de user dans la bdd
-                $this->userManager->edit($user);      
+                
             }
-        
-        }
-        
             require 'Views/security/profil.php';
-    }
+        }
     } 
     
 

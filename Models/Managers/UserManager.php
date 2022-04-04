@@ -30,7 +30,7 @@
         }
         
         public function edit($user){
-            // var_dump($user);
+            var_dump($user);
             // var_dump($_SESSION);
             // var_dump($_SESSION['user']->getID());
             
