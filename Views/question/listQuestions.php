@@ -10,7 +10,7 @@
 
 <body class="main-bg">
 <div class="container">
-    <table class="table">
+    <table class="table text-white">
         <thead>
             <th scope="col">Utilisateur</th>
             <th scope="col">Sujet</th>

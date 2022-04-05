@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="Public\css\profil.css">
     <title>Votre profil</title>
 </head>
-<body class="main-bg">
+<body class="main-bg text-white">
     
 
 <h1 class="text-center">Bienvenue sur votre profil <?=$_SESSION['user']->getUser_ID()?></h1>

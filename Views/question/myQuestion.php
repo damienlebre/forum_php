@@ -12,7 +12,7 @@
 
 <body class="main-bg">
 <div class="container">
-    <table class="table">
+    <table class="table text-white">
         <thead>
             <th scope="col">Utilisateur</th>
             <th scope="col">Sujet</th>
@@ -52,7 +52,7 @@
     </table>
 </div>
 
-<a href="index.php?controller=question&action=addQuestion">Poser une question</a>
+<a class="btn btn-danger" href="index.php?controller=question&action=addQuestion">Poser une question</a>
 
 <script rel="script" src="Public/js/bootstrap.min.js"></script>
 </body>

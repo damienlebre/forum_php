@@ -1,4 +1,5 @@
 .main-bg {
     background: #424242;
-    background: linear-gradient( #424242, #212121);     
+    background: linear-gradient( #424242, #212121);  
+    color: black!important;   
 }
