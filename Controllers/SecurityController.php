@@ -118,7 +118,7 @@
                 
                 // si pas d'erreurs ajouter le username dans la bdd
                 if(count($errors) == 0){
-                    var_dump($_POST);
+                    
                   
                     
                     // Conserver les infos existante si on ne les modifie pas
@@ -126,7 +126,7 @@
                     // Modification du profil
                     if($_POST['username'] === ""){
                         $newUserName = $_SESSION['user']->getUser_ID();
-                        var_dump($newUserName);
+                        
                     }else{
                         $newUserName = $_POST['username'];
                     }
@@ -144,8 +144,11 @@
                     }else{
                         $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
                     }
-                    var_dump($_POST);
-                    var_dump($_SESSION);
+
+                    if($_POST["password"] != $_POST["password_confirm"]){
+                        $errors[] = "Les mots de passe ne sont pas identiques";
+                    }
+                    
                     $user = new User($_SESSION['user']->getID(), $newUserName, $newMail, $newPassword , $fileNameNew);
                     $_SESSION['user'] = $user;
                     // modif de user dans la bdd
