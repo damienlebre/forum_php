@@ -61,18 +61,30 @@
                     if($_POST["password"] != $_POST["password_confirm"]){
                         $errors[] = "Les mots de passe ne sont pas identiques";
                     }
-                
-                    // si pas d'erreurs ajouter le username dans la bdd
-                    if(count($errors) == 0){
-                        // hash du pawwsword
-                        $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
                     
-                        // creation du nouveau user
-                        $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,'defaut.png');
-                        
-                        // ajout du nouveau user dans la bdd
-                        $this->userManager->add($user);      
+                   
+                    if(isset($_POST["password"]) && isset($_POST["password_confirm"])){
+                        if(preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/', $_POST['password'])){
+                             // si pas d'erreurs ajouter le username dans la bdd
+                            if(count($errors) == 0){
+                                // hash du password
+                                $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                            
+                                // creation du nouveau user
+                                $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,'defaut.png');
+                                
+                                // ajout du nouveau user dans la bdd
+                                $this->userManager->add($user);  
+                                
+                            }
+                              
+                        }else{
+                            $errors[]="Merci de choisir un mot de passe au format valide .";
+                            
+                        }
                     }
+
+                   
                 
                 }
                 require 'Views/security/register.php';
