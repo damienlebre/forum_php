@@ -76,6 +76,7 @@ nav{
   margin-left: 2vw;
   font-size: 1rem;
   cursor: pointer;
+  color: #f2f5f7;
 }
 .login-button:hover {
   color: #131418;
