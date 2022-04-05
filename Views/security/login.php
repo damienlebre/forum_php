@@ -24,6 +24,7 @@
             <h3 class="text-whitesmoke ">Se connecter à SuperForum</h3>                
             <div class="container-content ">
             <form class="margin-t" method="post">
+                    <input type="checkbox" name="raison">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="">
                 </div>

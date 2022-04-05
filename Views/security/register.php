@@ -19,6 +19,7 @@
                 <div class="container-content ">
 
                     <form class="margin-t" method="post">
+                            <input type="checkbox" name="raison">
                         <div class="form-group">
                         <label for="username">Choisir votre nom d'utilisateur :</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="">

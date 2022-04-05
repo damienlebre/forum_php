@@ -68,7 +68,7 @@
                         $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
                     
                         // creation du nouveau user
-                        $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,null);
+                        $user = new User(null, $_POST['username'], $_POST['mail'], $hash ,'defaut.png');
                         
                         // ajout du nouveau user dans la bdd
                         $this->userManager->add($user);      
@@ -109,9 +109,10 @@
                         $fileDestination = 'Public/uploads/' . $fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
                         $oldImage = 'Public/uploads/' . $_SESSION['user']->getImage();
-                        if(file_exists($oldImage)){
+                        if(is_file($oldImage)&& $oldImage != 'Public/uploads/defaut.png'){
                             unlink($oldImage);
                         }
+                        
                     }
                    
                 }

@@ -43,6 +43,7 @@
 <div class="d-flex justify-content-center">
     <div class="row ">
         <form enctype="multipart/form-data" method="post">
+                    <input type="checkbox" name="raison">
                 <div class="mb-3">
                     <label for="username" class="form-label">Nouveau Login : </label>
                     <input class="form-control" id="username" name="username" type="text">

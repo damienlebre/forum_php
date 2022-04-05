@@ -15,6 +15,7 @@
         <h1 class="text-left ms-3 mb-5 text-white">Ajouter une question :</h1>
 
         <form  method="post" class="d-flex flex-column "> 
+                <input type="checkbox" name="raison">
             <label for="question" class="ms-5 fw-bold text-white">Sujet :</label>
             <div class="ms-5">
                 <input type="text" id="question" name="subject"  class="col-6 mb-3 rounded border-0" required>

@@ -15,6 +15,7 @@
                 <h2>Editer le sujet</h2>
 
                 <form method="post" >
+                        <input type="checkbox" name="raison">
                     <!-- modifier le sujet -->
                     <div class="py-4">
                         <p>Le sujet : <?= $subject->getSubject(); ?></p>
